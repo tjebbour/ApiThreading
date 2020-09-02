@@ -67,7 +67,7 @@ namespace CoxExercise
                 var finalResponse = await coxAPI.Save(datasetId, answer);
 
                 timeTracker.Stop();
-              //  NotifyClients(string.Empty);
+
                 NotifyClients($"\nTotal processing time: {timeTracker.TotalSeconds} seconds.");
                 NotifyClients($"Final response: {finalResponse}");
 
