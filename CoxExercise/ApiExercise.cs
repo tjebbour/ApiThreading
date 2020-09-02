@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 
 namespace CoxExercise
 {
-    public class ApiExcercise
+    public class ApiExercise
     {
         public event EventHandler<string> Notify;
 
         private readonly ICoxAPI coxAPI;
         private readonly ITimeTracker timeTracker;
-        public ApiExcercise(ICoxAPI api, ITimeTracker tracker)
+        public ApiExercise(ICoxAPI api, ITimeTracker tracker)
         {
             coxAPI = api;
             timeTracker = tracker;

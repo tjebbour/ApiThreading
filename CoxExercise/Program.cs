@@ -24,13 +24,13 @@ namespace CoxExercise
             services.AddScoped<ITimeTracker, TimeTracker>();
             services.AddSingleton<ICoxHttpClient, CoxHttpClient>();
             services.AddScoped<ICoxAPI, CoxAPI>();
-            services.AddScoped<ApiExcercise>();
+            services.AddScoped<ApiExercise>();
             serviceProvider = services.BuildServiceProvider();
         }
 
         private static void Run()
         {
-            var service =  serviceProvider.GetService<ApiExcercise>();
+            var service =  serviceProvider.GetService<ApiExercise>();
             service.Notify += Service_Notify;
             service.Run();
         }

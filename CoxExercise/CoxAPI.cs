@@ -19,6 +19,10 @@ namespace CoxExercise
         {
             var data = await _httpClient.Get("datasetId");
             var dataset = JsonConvert.DeserializeObject<DataSet>(data);
+
+            if (dataset == null || string.IsNullOrEmpty(dataset.DatasetId))
+                throw new ArgumentNullException(dataset.DatasetId);
+
             return dataset.DatasetId;
         }
 
