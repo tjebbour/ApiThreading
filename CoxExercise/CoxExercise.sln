@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoxExercise", "CoxExercise.csproj", "{E837E272-66A5-47C4-AFC7-43D39B63F1D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoxExercise.Tests", "..\CoxExercise.Tests\CoxExercise.Tests.csproj", "{C79E0133-ADD2-4F78-9051-393B8CABCCFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E837E272-66A5-47C4-AFC7-43D39B63F1D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E837E272-66A5-47C4-AFC7-43D39B63F1D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E837E272-66A5-47C4-AFC7-43D39B63F1D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E837E272-66A5-47C4-AFC7-43D39B63F1D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C79E0133-ADD2-4F78-9051-393B8CABCCFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C79E0133-ADD2-4F78-9051-393B8CABCCFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C79E0133-ADD2-4F78-9051-393B8CABCCFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C79E0133-ADD2-4F78-9051-393B8CABCCFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB1E5F0B-DAAC-4016-A72C-24F57700B471}
+	EndGlobalSection
+EndGlobal
