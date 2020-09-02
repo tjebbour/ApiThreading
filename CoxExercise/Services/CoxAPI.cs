@@ -17,13 +17,16 @@ namespace CoxExercise
         }
         public async Task<string> GetDataSetId()
         {
-            var data = await _httpClient.Get("datasetId");
+            var data = string.Empty;
+
+            data = await _httpClient.Get("datasetId");
             var dataset = JsonConvert.DeserializeObject<DataSet>(data);
 
             if (dataset == null || string.IsNullOrEmpty(dataset.DatasetId))
                 throw new ArgumentNullException(dataset.DatasetId);
 
             return dataset.DatasetId;
+
         }
 
         public async Task<Vehicles> GetVehiclesIds(string datasetId)

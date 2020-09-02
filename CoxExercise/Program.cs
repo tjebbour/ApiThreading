@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Threading.Tasks;
 
 namespace CoxExercise
 {
@@ -11,8 +12,7 @@ namespace CoxExercise
         static void Main(string[] args)
         {
             RegisterServices();
-            Run();
-
+            Run().Wait();
             Console.ReadKey();
         }
 
@@ -28,11 +28,11 @@ namespace CoxExercise
             serviceProvider = services.BuildServiceProvider();
         }
 
-        private static void Run()
+        private async static Task Run()
         {
             var service =  serviceProvider.GetService<ApiExercise>();
             service.Notify += Service_Notify;
-            service.Run();
+            await service.Run();
         }
 
         private static void Service_Notify(object sender, string e)

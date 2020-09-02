@@ -23,7 +23,9 @@ namespace CoxExercise
             {
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var response = await client.GetAsync($"{baseUrl}{endPoint}");
+                HttpResponseMessage response = null;
+
+                response = await client.GetAsync($"{baseUrl}{endPoint}");
                 if (response.IsSuccessStatusCode)
                     return await response.Content.ReadAsStringAsync();
 

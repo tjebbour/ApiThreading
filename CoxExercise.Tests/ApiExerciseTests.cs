@@ -15,6 +15,7 @@ namespace CoxExercise.Tests
         {
             //setup dependencies
 
+            //Time tracker mock
             var timeTrackerMock = new Mock<ITimeTracker>();
             timeTrackerMock.Setup(p => p.Start());
             timeTrackerMock.Setup(p => p.Stop());

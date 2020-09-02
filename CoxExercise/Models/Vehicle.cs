@@ -18,7 +18,5 @@ namespace CoxExercise.Models
 
         [JsonProperty(PropertyName = "model")]
         public string Model { get; set; }
-
-
     }
 }
