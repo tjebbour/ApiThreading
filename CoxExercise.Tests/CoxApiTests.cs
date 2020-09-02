@@ -26,7 +26,8 @@ namespace CoxExercise.Tests
         {
             //Setup
             var httpClientMoq = new Mock<ICoxHttpClient>();
-            httpClientMoq.Setup(client => client.Get(It.IsAny<string>())).Returns(Task.FromResult("{\"datasetId\": \"\"}"));
+            httpClientMoq.Setup(client => client.Get(It.IsAny<string>()))
+                .Returns(Task.FromResult("{\"datasetId\": \"\"}"));
 
             //Execute
             await Assert.ThrowsExceptionAsync<ArgumentNullException>(async () => await new CoxAPI(httpClientMoq.Object).GetDataSetId());
@@ -38,7 +39,8 @@ namespace CoxExercise.Tests
         {
             //Setup
             var httpClientMoq = new Mock<ICoxHttpClient>();
-            httpClientMoq.Setup(client => client.Get(It.IsAny<string>())).Returns(Task.FromResult("{\"dealerId\": 9,\"name\": \"Jimmy Baba\"}"));
+            httpClientMoq.Setup(client => client.Get(It.IsAny<string>()))
+                .Returns(Task.FromResult("{\"dealerId\": 9,\"name\": \"Jimmy Baba\"}"));
 
             //Execute
             var dealer = await new CoxAPI(httpClientMoq.Object).GetDealer(It.IsAny<string>(), It.IsAny<int>());
