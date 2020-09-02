@@ -5,7 +5,15 @@ namespace CoxExercise
     public interface ITimeTracker
     {
         public double TotalSeconds { get; }
+
+        /// <summary>
+        /// Starts the timer
+        /// </summary>
         void Start();
+
+        /// <summary>
+        /// Stops the timer
+        /// </summary>
         void Stop();
     }
 

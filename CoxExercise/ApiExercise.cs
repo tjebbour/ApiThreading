@@ -24,7 +24,6 @@ namespace CoxExercise
         }
         public async Task<bool> Run()
         {
-
             try
             {
                 timeTracker.Start();
